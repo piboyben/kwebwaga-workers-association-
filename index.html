@@ -357,31 +357,6 @@ text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
     }
 }
 
-<header>
-    <div class="golden-line"></div>
-    <div class="golden-line-2"></div>
-    <div class="header-glow"></div>
-    <div class="top-bar">
-        <div class="logo-area">
-            <div class="logo-placeholder">
-                <img src="images/kbglogo.jpg" alt="Kwebwaga Workers' Association Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='KWA'">
-            </div>
-            <div class="brand-name">Kwebwaga Workers' Association</div>
-        </div>
-        <!-- NEW HORIZONTAL NAVIGATION -->
-        <nav class="header-nav">
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#history">History</a></li>
-                <li><a href="#mission">Mission & Vision</a></li>
-                <li><a href="#members">Members</a></li>
-                <li><a href="#news">News & Updates</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-  
 /* NAVIGATION MENU */
 .nav-menu {
 position: fixed;
@@ -1173,41 +1148,32 @@ display: block;
 </head>
 <body>
 <!-- Overlay -->
-<div class="overlay" onclick="toggleMenu()"></div>
+<!--<div class="overlay" onclick="toggleMenu()"></div>-->
 <!-- Header with Golden Shimmer Effect -->
 <header>
-<div class="golden-line"></div>
-<div class="golden-line-2"></div>
-<div class="header-glow"></div>
-<div class="top-bar">
-<div class="logo-area">
-<div class="logo-placeholder">
-<img src="images/kbglogo.jpg" alt="Kwebwaga Workers' Association Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='KWA'">
-</div>
-<div class="brand-name">Kwebwaga Workers' Association</div>
-</div>
-<div class="hamburger-menu">
-<button class="hamburger-btn" onclick="toggleMenu()" aria-label="Toggle navigation menu">
-<i class="fas fa-bars"></i>
-<span>Menu</span>
-</button>
-</div>
-</div>
+  <div class="golden-line"></div>
+  <div class="golden-line-2"></div>
+  <div class="header-glow"></div>
+  <div class="top-bar">
+    <div class="logo-area">
+      <div class="logo-placeholder">
+        <img src="images/kbglogo.jpg" alt="Kwebwaga Workers' Association Logo" onerror="this.style.display='none'; this.parentElement.innerHTML='KWA'">
+      </div>
+      <div class="brand-name">Kwebwaga Workers' Association</div>
+    </div>
+    <!-- NEW HORIZONTAL NAVIGATION -->
+    <nav class="header-nav">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#history">History</a></li>
+        <li><a href="#mission">Mission & Vision</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#news">News & Updates</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
-<!-- Navigation Menu -->
-<nav class="nav-menu" id="navMenu">
-<button class="close-menu" onclick="toggleMenu()" aria-label="Close menu">
-<i class="fas fa-times"></i>
-</button>
-<ul>
-<li><a href="#home" onclick="toggleMenu()">Home</a></li>
-<li><a href="#history" onclick="toggleMenu()">History</a></li>
-<li><a href="#mission" onclick="toggleMenu()">Mission & Vision</a></li>
-<li><a href="#members" onclick="toggleMenu()">Members</a></li>
-<li><a href="#news" onclick="toggleMenu()">News & Updates</a></li>
-<li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-</ul>
-</nav>
 <!-- Hero Section -->
 <section id="home" class="hero">
 <h1>Kwebwaga Workers' Association</h1>
@@ -2551,6 +2517,13 @@ Your browser does not support the video tag.
 </footer>
 <!-- JavaScript -->
 <script>
+// Toggle Navigation Menu
+function toggleMenu() {
+const navMenu = document.getElementById('navMenu');
+const overlay = document.querySelector('.overlay');
+navMenu.classList.toggle('active');
+overlay.classList.toggle('active');
+}
 
 // Filter Members
 function filterMembers() {
