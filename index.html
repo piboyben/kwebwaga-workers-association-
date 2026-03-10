@@ -533,6 +533,63 @@ box-shadow: 0 0 5px var(--gold);
 box-shadow: 0 0 15px var(--gold);
 }
 }
+        /* Map Section */
+        .map-card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            margin-top: 10px;
+        }
+
+        .map-placeholder {
+            height: 250px;
+            background: linear-gradient(135deg, #e0e7ff, #dbeafe);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: var(--contact-primary);
+            text-align: center;
+            padding: 20px;
+        }
+
+        .map-placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        .map-placeholder p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .map-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: var(--contact-primary);
+            color: white;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition-smooth);
+        }
+
+        .map-link:hover {
+            background: var(--contact-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(52, 152, 219, 0.4);
+          }
+  
 /* MISSION & VISION */
 .mv-container {
 display: grid;
